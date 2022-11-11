@@ -1,11 +1,11 @@
-# RWJS: Command line reader and editor for JSON files
+# RWJS: Command line reader and editor for JSON
 
 - `node rwjs.js`
 
 ```
 RWJS v0.1.0
 
-AM is a editor that uses Automerge commands to manipulate files in this format via the command line.
+RWJS is a command line JSON reader and editor.
 
 Usage:
     node rwjs.js <file> init

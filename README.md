@@ -1,6 +1,6 @@
-# RWJS: Command line reader and editor for JSON files
+# RWJS: Command line reader and editor for JSON
 
-RWJS is command line JSON reader and editor
+RWJS is a command line JSON reader and editor
 
 - [Commands](docs/cmds.md): list of all available commands
 
