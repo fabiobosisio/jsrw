@@ -45,7 +45,7 @@ More Information:
 
     https://github.com/fabiobosisio/rwjs.git
 
-    Please report bugs at <https://github.com/fabiobosisio/rwjs/blob/master/README.md>.
+    Please report bugs at <https://github.com/fabiobosisio/rwjs/blob/master/README.md>
 ```
  <!-- 
 ### init - Inicializa um arquivo Automerge
