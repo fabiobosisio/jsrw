@@ -8,11 +8,16 @@ RWJS v0.1.0
 RWJS is a command line JSON reader and editor
 
 Usage:
-    node rwjs.js <file> init
+    node rwjs.js <file> init <start>
     node rwjs.js <file> <path>... <mode> <op>
 
 File:
     Filename without extension.
+
+Start:
+    {}    Starts with an empty object
+    |
+    []    Starts with an empty array
 
 Path:    
     field <fld>    Indicates the field to be accessed
