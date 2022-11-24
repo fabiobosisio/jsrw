@@ -40,7 +40,7 @@ function recompose(path){
 
 function del(type, fieldname) {
   console.log("Arquivo:")
-  console.log(root)
+  show(root);
   if (type == 'object'){
     delete out[fieldname]
     
@@ -49,7 +49,7 @@ function del(type, fieldname) {
   out.splice(fieldname, 1)
 }
   console.log("Arquivo atualizado:")
-  console.log(root)	
+  show(root);	
   // Salva o arquivo local .json
   fs.writeFileSync(file, JSON.stringify(root), {encoding: null});
   return;
@@ -59,7 +59,7 @@ function insert(type, fieldname, valuetype, value) {
   if (type == 'object'){
     console.log("em Objeto")
     console.log("Arquivo:")
-    console.log(root)
+    show(root);
     switch(valuetype) {
 	case 'object':
 	  console.log("object")
@@ -94,7 +94,7 @@ function insert(type, fieldname, valuetype, value) {
   }else if (type == 'array'){ 
     console.log("em Vetor")
     console.log("Arquivo:")
-    console.log(root)
+    show(root);
     switch(valuetype) {
 	case 'object':
 	  console.log("object")
@@ -127,11 +127,16 @@ function insert(type, fieldname, valuetype, value) {
       }
   }
   console.log("Arquivo atualizado:")
-  console.log(root)	
+  show(root);	
   // Salva o arquivo local .json
   fs.writeFileSync(file, JSON.stringify(root), {encoding: null});
   return;
 }
+
+function show(out){
+    console.dir(out, { depth: null} );
+  return;
+  }
 
 while (process.argv[a]){
   
@@ -151,11 +156,8 @@ while (process.argv[a]){
 		i++;
 		path[i] = process.argv[a+1];
 	}else if (process.argv[a] == 'read'){ // habilita o modo leitura e exibe o json
-	/* for(let c=1; c<=i; c++){
-		out = out[path[c]];
-		};*/
 		recompose(path);
-		console.log(out);// exibe o json na tela
+		show(out);// exibe o json na tela
 		}else if (process.argv[a] == 'write'){ // habilita o modo edicao
 			recompose(path);
 			switch(process.argv[a+2]) {
