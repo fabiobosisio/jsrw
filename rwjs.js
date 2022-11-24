@@ -11,7 +11,7 @@ function save(file, value){
   if(file.split('.').pop()!="json"){ 
     file = file + file.split('.').slice(0, -1).join('.')+".json"
   }
-  fs.writeFileSync(file, JSON.stringify(value), {encoding: null});
+  fs.writeFileSync(file, value, {encoding: null});
 
   return;
 }
@@ -133,19 +133,17 @@ function insert(type, fieldname, valuetype, value) {
   return;
 }
 
-
-
-
 while (process.argv[a]){
   
   if (process.argv[a] == 'init'){ // inicializa o arquivo JSON com as opçôes {} ou []
+
+  const tempinit = JSON.parse(process.argv[a+1]);
   
-  
-  if (process.argv[a+1] == {} || process.argv[a+1] == []){
-    save(process.argv[2], process.argv[a+1])
-    console.log(process.argv[a+1]);
+  if (JSON.stringify(tempinit) == "{}" || JSON.stringify(tempinit) == "[]"){
+    save(process.argv[2], JSON.stringify(tempinit))
+    console.log(tempinit);
   }else{
-    console.log("Formato minimo de inicialização invalido");
+    console.log("Formato minimo de inicializacao invalido");
   }
 
 

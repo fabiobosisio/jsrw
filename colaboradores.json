@@ -1,0 +1,23 @@
+{
+    "escola": "Trybe",
+    "cursos": [
+        "cursosprogramacao",
+        [
+            [
+                "java",
+                1,
+                2,
+                3
+            ],
+            [
+                "php"
+            ],
+            [
+                "javascript",
+                1,
+                2,
+                3
+            ]
+        ]
+    ]
+}
