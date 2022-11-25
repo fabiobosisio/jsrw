@@ -10,9 +10,13 @@ RWJS is a command line JSON reader and editor
 Usage:
     node rwjs.js <file> init <start>
     node rwjs.js <file> <path>... <mode> <op>
+    node rwjs.js help
+
+Help:
+    Displays this manual
 
 File:
-    Filename without extension.
+    Filename
 
 Start:
     {}    Starts with an empty object
@@ -25,7 +29,7 @@ Path:
     index <idx>    Indicates the index of the accessed field, if it is an array type field
 
 Mode:
-    read           Enables read mode, in which case it is not necessary to include operations.    
+    read           Enables read mode, in which case it is not necessary to include operations    
     |
     write          Enables editor mode, it is necessary to include the desired operation (<op>)
 
