@@ -119,8 +119,79 @@ function del(type, fieldname) {
   return;
 }
 
-// Função de inserção/edição de valores
+// Função de inserção de valores
 function insert(type, fieldname, valuetype, value) {
+  if (type == 'object'){
+    if(verbose) console.log("em Objeto")
+    if(verbose) console.log("Arquivo:")
+    if(verbose) show(root);
+    switch(valuetype) {
+	case 'object':
+	  if(verbose) console.log("object")
+	  out[fieldname] = {}
+	break;
+	case 'array':
+	  if(verbose) console.log("array")
+	  out[fieldname] = []
+	break;
+	case 'string':
+	  if(verbose) console.log("string:"+value)
+	  out[fieldname] = value
+	break;
+	case 'number':
+	  if(verbose) console.log("number:"+value)
+	  out[fieldname] = Number(value)
+	break;
+	case 'bool':
+	  if(verbose) console.log("bool:"+value)
+	  out[fieldname] = JSON.parse(value)
+	break;
+	case 'null':
+	  if(verbose) console.log("null")
+	  out[fieldname] = null;
+	default:
+      }
+    
+  }else if (type == 'array'){ 
+    if(verbose) console.log("em Vetor")
+    if(verbose) console.log("Arquivo:")
+    if(verbose) show(root);
+    switch(valuetype) {
+	case 'object':
+	  if(verbose) console.log("object")
+	  out.splice(fieldname, 0, {});
+	break;
+	case 'array':
+	  if(verbose) console.log("array")
+	  out.splice(fieldname, 0, []);
+	break;
+	case 'string':
+	  if(verbose) console.log("string:"+value)
+	  out.splice(fieldname, 0, value);
+	break;
+	case 'number':
+	  if(verbose) console.log("number:"+value)
+	  out.splice(fieldname, 0, Number(value));
+	break;
+	case 'bool':
+	  if(verbose) console.log("bool:"+value)
+	  out.splice(fieldname, 0, JSON.parse(value));
+	break;
+	case 'null':
+	  if(verbose) console.log("null")
+	  out.splice(fieldname, 0, null);
+	default:
+      }
+  }
+  console.log("Arquivo atualizado:")
+  show(root);	
+  // Salva o arquivo local .json
+  save(file,root)
+  return;
+}
+
+// Função de edição de valores
+function sett(type, fieldname, valuetype, value) {
   if (type == 'object'){
     if(verbose) console.log("em Objeto")
     if(verbose) console.log("Arquivo:")
@@ -226,7 +297,7 @@ while (process.argv[a]){
 	  break;
 	  case 'set':
 	      if(verbose) console.log("set");
-	      insert(process.argv[a+1], process.argv[a+3],process.argv[a+4],process.argv[a+5]);
+	      sett(process.argv[a+1], process.argv[a+3],process.argv[a+4],process.argv[a+5]);
 	  break;
 	  case 'del':
 	      if(verbose) console.log("del")
