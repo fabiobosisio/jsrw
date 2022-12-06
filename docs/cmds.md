@@ -1,16 +1,16 @@
-# RWJS: Command line reader and editor for JSON
+# JSRW: Command line reader and editor for JSON
 
-- `node rwjs.js`
+- `node jsrw.js`
 
 ```
-RWJS v0.1.0
+JSRW v0.1.0
 
-RWJS is a command line JSON reader and editor
+JSRW is a command line JSON reader and editor
 
 Usage:
-    node rwjs.js <file> init <start>
-    node rwjs.js <file> <path>... <mode> <op>
-    node rwjs.js help
+    node jsrw.js <file> init <value>
+    node jsrw.js <file> <path>... <mode> <op>
+    node jsrw.js help
 
 Help:
     Displays this manual
@@ -18,10 +18,10 @@ Help:
 File:
     Filename
 
-Start:
-    {}    Starts with an empty object
+Value:
+    {}    Starts a JSON file with an empty object
     |
-    []    Starts with an empty array
+    []    Starts a JSON file with an empty array
 
 Path:    
     field <fld>    Indicates the field to be accessed
@@ -52,9 +52,9 @@ Ops:
 
 More Information:
 
-    https://github.com/fabiobosisio/rwjs.git
+    https://github.com/fabiobosisio/jsrw.git
 
-    Please report bugs at <https://github.com/fabiobosisio/rwjs/blob/master/README.md>
+    Please report bugs at <https://github.com/fabiobosisio/jsrw/blob/master/README.md>
 ```
  <!-- 
 ### init - Inicializa um arquivo Automerge

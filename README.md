@@ -1,6 +1,6 @@
-# RWJS: Command line reader and editor for JSON
+# JSRW: Command line reader and editor for JSON
 
-RWJS is a command line JSON reader and editor
+JSRW is a command line JSON reader and editor
 
 - [Commands](docs/cmds.md): list of all available commands
 
@@ -13,13 +13,13 @@ RWJS is a command line JSON reader and editor
 sudo apt install nodejs
 ```
 
-4. Clone the `rwjs` repository to use the tool:
+4. Clone the `jsrw` repository to use the tool:
 
 ```
-git clone https://github.com/fabiobosisio/rwjs.git
+git clone https://github.com/fabiobosisio/jsrw.git
 ```
 
-5. Use the editor inside the `/home/user/rwjs` directory
+5. Use the editor inside the `/home/user/jsrw` directory
 
 The versions used in the tests were:
 -   NPM v8.13.2
